@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prcing Table Card using HTML & CSS</title>
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<style>
+/* Import Google Font - Poppins & Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(#614385 0%, #516395 100%);
+}
+.card{
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+}
+.card .tabs{
+  text-align: center;
+  border: 1px solid #bfbfbf;
+  border-radius: 20px;
+  padding: 5px 5px;
+}
+.card .tabs label{
+  color: #111;
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.card .info-card{
+  margin-top: 20px;
+}
+.card .info-card .pricing,
+.card .info-card .details{
+  text-align: center;
+}
+.card .info-card .pricing{
+  font-size: 48px;
+  font-weight: 600;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+.card .info-card .pricing::before{
+  content: '$';
+  position: absolute;
+  top: 10px;
+  left: 106px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.card .info-card .pricing::after{
+  content: '/mon';
+  position: absolute;
+  top: 30px;
+  left: 180px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.card .info-card .details{
+  margin-top: 7px;
+  font-weight: 500;
+}
+.card .info-card .list{
+  margin-top: 20px;
+}
+.card .info-card .list li{
+  list-style: none;
+  margin-top: 9px;
+  font-weight: 500;
+  text-align: center;
+}
+.card .info-card .list li span{
+  font-size: 16px;
+}
+.card .info-card .list li i.error{
+  color: #FF0000;
+  font-size: 18px;
+}
+.card .info-card .list li i.check{
+  color: #2ecc71;
+  font-size: 18px;
+}
+.card .info-card.stnd{
+  margin-left: 100px;
+}
+.card .info-card.ultm{
+  margin-left: 100px;
+}
+.card .info-card.stnd{
+  margin-left: 100px;
+}
+/* ... card button */
+.card .button{
+  text-align: center;
+  margin-top: 30px;
+}
+.card .button a{
+  background: linear-gradient(#614385 0%, #516395 100%);
+  padding: 8px 90px;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  outline: none;
+}
+.card .button a:hover{
+  letter-spacing: 2px;
+}
+/* ... overflow hidden - hides any unwanted spaces */
+.card{
+  overflow: hidden;
+}
+.card .info{
+  display: flex;
+  width: 400%;
+  background: #fff;
+  transition: all 0.2s ease;
+  margin-left: 25px;
+}
+.card .info.basic{
+  margin-left: 25px;
+}
+.card .info.standard{
+  margin-left: -370px;
+}
+.card .info.ultimate{
+  margin-left: -765px;
+}
+.card .tabs label{
+  transition: all 0.2s ease;
+}
+.card .tabs label.tab1.basic{
+  background: linear-gradient(#614385 0%, #516395 100%);
+  color: #fff;
+}
+.card .tabs label.tab2.standard{
+  background: linear-gradient(#614385 0%, #516395 100%);
+  color: #fff;
+}
+.card .tabs label.tab3.ultimate{
+  background: linear-gradient(#614385 0%, #516395 100%);
+  color: #fff;
+}
+
+</style>
+    <div class="card">
+      <div class="tabs">
+        <label for="basic" class="tab1 basic">Basic</label>
+        <label for="standard" class="tab2">Standard</label>
+        <label for="ultimate" class="tab3">Ultimate</label>
+      </div>
+      <div class="info">
+        <div class="info-card">
+          <div class="pricing">49</div>
+          <div class="details">For educational use</div>
+
+        <!--  -->
+        <div class="items">
+          <div class="list">
+            <ul>
+              <li><i class='check bx bx-check'></i> <span>50GB Cloud Storage</span></li>
+              <li><i class='check bx bx-check'></i> <span>Free Installation Scripts supported</span></li>
+              <li><i class='error bx bx-x'></i> <span>Unlimited Domain License</span></li>
+              <li><i class='error bx bx-x'></i> <span>Ultimate Template Updates</span></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <!--  -->
+        <div class="info-card stnd">
+          <div class="pricing">69</div>
+          <div class="details">For professional use</div>
+
+        <!--  -->
+        <div class="items">
+          <div class="list">
+            <ul>
+              <li><i class='check bx bx-check'></i> <span>80GB Cloud Storage</span></li>
+              <li><i class='check bx bx-check'></i> <span>Free Installation Scripts supported</span></li>
+              <li><i class='check bx bx-check'></i> <span>Unlimited Domain License</span></li>
+              <li><i class='error bx bx-x'></i> <span>Ultimate Template Updates</span></li>
+            </ul>
+          </div>
+        </div>
+        <!--  -->
+        </div>
+
+        <div class="info-card ultm">
+          <div class="pricing">99</div>
+          <div class="details">For ultimate use</div>
+
+        <!--  -->
+        <div class="items">
+          <div class="list">
+            <ul>
+              <li><i class='check bx bx-check'></i> <span>100GB Cloud Storage</span></li>
+              <li><i class='check bx bx-check'></i> <span>Free Installation Scripts supported</span></li>
+              <li><i class='check bx bx-check'></i> <span>Unlimited Domain License</span></li>
+              <li><i class='check bx bx-check'></i> <span>Ultimate Template Updates</span></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="button">
+        <a href="">Choose Plan</a>
+      </div>
+    </div>
+    <script>
+        const card = document.querySelector(".card"),
+tabs_basic = document.querySelector(".tab1"),
+tabs_standard = document.querySelector(".tab2"),
+tabs_ultimate = document.querySelector(".tab3"),
+info = document.querySelector(".info");
+
+tabs_basic.onclick = (e)=>{
+  tabs_basic.classList.add("basic");
+  tabs_standard.classList.remove("standard");
+  tabs_ultimate.classList.remove("ultimate");
+
+  info.classList.add("basic");
+  info.classList.remove("standard");
+  info.classList.remove("ultimate");
+}
+
+tabs_standard.onclick = (e)=>{
+  tabs_standard.classList.add("standard");
+  tabs_basic.classList.remove("basic");
+  tabs_ultimate.classList.remove("ultimate");
+
+  info.classList.remove("basic");
+  info.classList.add("standard");
+  info.classList.remove("ultimate");
+}
+
+tabs_ultimate.onclick = (e)=>{
+  tabs_basic.classList.remove("basic");
+  tabs_standard.classList.remove("standard");
+  tabs_ultimate.classList.add("ultimate"); // now this is for the tabs movement
+
+  info.classList.remove("basic");
+  info.classList.remove("standard");
+  info.classList.add("ultimate"); // this is for the text movement
+}
+    </script>
+</body>
+</html>
